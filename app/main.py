@@ -7,8 +7,7 @@ def copy_file(command: str) -> None:
     origin = names_of_files[1]
     new_copy = names_of_files[2]
     try:
-        with (open(origin, "r") as info_in,
-              open(new_copy, "w") as info_out):
+        with open(origin, "r") as info_in, open(new_copy, "w") as info_out:
             content = info_in.read()
             info_out.write(content)
     except FileNotFoundError:
